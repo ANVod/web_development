@@ -1,18 +1,18 @@
 from flask import Flask, render_template
 
-app = Flask(__name__)
+app = Flask(__name__)#создание приложения
 
-@app.route('/')
-def index():
-    return render_template('index.html')
+@app.route('/')#главная страница
+def index():#функция
+    return render_template('index.html')#приветственное сообщение
 
-@app.route('/blog')
+@app.route('/blog')#страница блога
 def blog():
-    return render_template('blog.html')
+    return render_template('blog.html')#сообщение о блогах
 
-@app.route('/contacts')
-def contacts():
-    return render_template('contacts.html')
+@app.route('/contacts')#страница контактов
+def contacts():#контактная информация
+    return render_template('contacts.html')#меню для навигации
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == '__main__':#запуск приложения
+    app.run(debug=True)#отладка
